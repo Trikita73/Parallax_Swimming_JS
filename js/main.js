@@ -1,4 +1,4 @@
-const mainHead = document.querySelector('main-header')
+const mainHeader = document.querySelector('.main-header')
 const cards = document.querySelectorAll('.card')
 
 const minWidth = 190
@@ -8,7 +8,7 @@ const padding = 10
 let occupedPositions = []
 
 function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (min - max + 1)) + min
+    return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
 function isOverLapping(x, y, width, height, positions) {
@@ -25,13 +25,13 @@ function isOverLapping(x, y, width, height, positions) {
 function getRandomPositionAndSize(maxX, maxY, card) {
     let x, y
     let attempts = 0
-    maxAttempts = 100
+    const maxAttempts = 100
     const width = getRandomInt(minWidth, maxWidth)
     const height = Math.floor(width * 2 / 3)
 
     do {
         x = Math.floor(Math.random() * (maxX - width))
-        y = Math.floor(Math.random() + (maxY - height))
+        y = Math.floor(Math.random() * (maxY - height))
 
         attempts++
 
@@ -57,8 +57,8 @@ function getRandomPositionAndSize(maxX, maxY, card) {
 }
 
 function placeCards() {
-    const maxX = mainHead.clientWidth
-    const maxY = mainHead.clientHeight
+    const maxX = mainHeader.clientWidth
+    const maxY = mainHeader.clientHeight
 
     occupedPositions = []
 
@@ -73,9 +73,26 @@ function placeCards() {
             card.style.width = `${width}px`
             card.style.height = `${height}px`
             card.dataset.depth = depth
+
+            occupedPositions.push({ x, y, width, height })
+        } else {
+            card.style.display = 'none'
         }
     })
 }
+
+mainHeader.addEventListener('mousemove', (e) => {
+    const mainHeaderRect = mainHeader.getBoundingClientRect()
+    const centerX = mainHeaderRect.width / 2
+    const centerY = mainHeaderRect.height / 2
+    const mouseX = (e.clientX - mainHeaderRect.left - centerX) / centerX
+    const mouseY = (e.clientY - mainHeaderRect.top - centerY) / centerY
+
+    mainHeader.style.setProperty('--mouse-x', mouseX)
+    mainHeader.style.setProperty('--mouse-y', mouseY)
+})
+
+window.addEventListener('load', placeCards)
 
 
 
