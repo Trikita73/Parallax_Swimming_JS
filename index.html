@@ -8,62 +8,70 @@
     <link rel="icon" href="img/favicon/favicon.ico">
     <link rel="stylesheet" href="css/main.css">
 
-    <script src="js/main.js" defer></script>
+    <script src="vendor/gsap/gsap.min.js" defer></script>
+    <script src="vendor/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="js/main.js" type="module"></script>
 </head>
 
 <body>
     
-    <header class="main-header">
+    <div class="wrapper">
+        <div class="content">
+            <header class="main-header">
 
-        <div class="logo"><span>.</span>ne</div>
-        <a href="#" class="add-new">Add new</a>
-        <div class="head-text">
-            <h1><span>E</span>vents for <br>the week</h1>
-        </div>
-        <div class="card">
-            <img src="img/1.jpg" alt="Alt">
-            <h3>Lorem, ipsum dolor.</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nemo?</p>
-        </div>
-        <div class="card">
-            <img src="img/2.jpg" alt="Alt">
-            <h3>Vel, sed iure!</h3>
-            <p>Unde impedit vitae quibusdam sit nulla harum, maiores molestias delectus.</p>
-        </div>
-        <div class="card">
-            <img src="img/3.jpg" alt="Alt">
-            <h3>Veniam, quo ullam!</h3>
-            <p>Facilis architecto asperiores ipsam ad nihil dolore dolorem, porro hic?</p>
-        </div>
-        <div class="card">
-            <img src="img/4.jpg" alt="Alt">
-            <h3>Quam, deserunt doloribus?</h3>
-            <p>Doloremque repellat quas nisi delectus pariatur atque vitae modi qui.</p>
-        </div>
-        <div class="card">
-            <img src="img/5.jpg" alt="Alt">
-            <h3>Maxime, dolor debitis.</h3>
-            <p>Cumque odio sequi, molestiae ut esse ipsam nulla porro aliquid.</p>
-        </div>
-        <div class="card">
-            <img src="img/6.jpg" alt="Alt">
-            <h3>Sint, impedit doloribus.</h3>
-            <p>Quas placeat inventore adipisci accusantium atque, totam vero alias minus.</p>
-        </div>
-        <div class="card">
-            <img src="img/7.jpg" alt="Alt">
-            <h3>Nisi, rerum voluptates.</h3>
-            <p>Commodi pariatur inventore ipsa velit tenetur quas, sint quibusdam ab!</p>
-        </div>
-        <div class="card">
-            <img src="img/8.jpg" alt="Alt">
-            <h3>Ducimus, enim distinctio.</h3>
-            <p>Totam sunt corrupti eos harum sint deleniti recusandae excepturi repellendus.</p>
-        </div>
-    </header>
+                <div class="logo"><span>.</span>ne</div>
+                <a href="#" class="add-new">Add new</a>
+                <div class="head-text">
+                    <h1 data-speed=".8"><span>E</span>vents for <br>the week</h1>
+                </div>
+                <div class="card">
+                    <img src="img/1.jpg" alt="Alt">
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nemo?</p>
+                </div>
+                <div class="card">
+                    <img src="img/2.jpg" alt="Alt">
+                    <h3>Vel, sed iure!</h3>
+                    <p>Unde impedit vitae quibusdam sit nulla harum, maiores molestias delectus.</p>
+                </div>
+                <div class="card">
+                    <img src="img/3.jpg" alt="Alt">
+                    <h3>Veniam, quo ullam!</h3>
+                    <p>Facilis architecto asperiores ipsam ad nihil dolore dolorem, porro hic?</p>
+                </div>
+                <div class="card">
+                    <img src="img/4.jpg" alt="Alt">
+                    <h3>Quam, deserunt doloribus?</h3>
+                    <p>Doloremque repellat quas nisi delectus pariatur atque vitae modi qui.</p>
+                </div>
+                <div class="card">
+                    <img src="img/5.jpg" alt="Alt">
+                    <h3>Maxime, dolor debitis.</h3>
+                    <p>Cumque odio sequi, molestiae ut esse ipsam nulla porro aliquid.</p>
+                </div>
+                <div class="card">
+                    <img src="img/6.jpg" alt="Alt">
+                    <h3>Sint, impedit doloribus.</h3>
+                    <p>Quas placeat inventore adipisci accusantium atque, totam vero alias minus.</p>
+                </div>
+                <div class="card">
+                    <img src="img/7.jpg" alt="Alt">
+                    <h3>Nisi, rerum voluptates.</h3>
+                    <p>Commodi pariatur inventore ipsa velit tenetur quas, sint quibusdam ab!</p>
+                </div>
+                <div class="card">
+                    <img src="img/8.jpg" alt="Alt">
+                    <h3>Ducimus, enim distinctio.</h3>
+                    <p>Totam sunt corrupti eos harum sint deleniti recusandae excepturi repellendus.</p>
+                </div>
 
-    <div class="othercontent">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi harum, laudantium, impedit tempore qui nemo dolorem facere ea voluptates atque repellendus ratione quia ipsum ut quae tenetur cum, distinctio omnis.</p>
+            </header>
+
+            <div class="othercontent">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi harum, laudantium, impedit tempore qui nemo dolorem facere ea voluptates atque repellendus ratione quia ipsum ut quae tenetur cum, distinctio omnis.</p>
+            </div>
+        </div>
     </div>
+    
 </body>
 </html>

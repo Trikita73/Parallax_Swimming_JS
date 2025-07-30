@@ -1,3 +1,23 @@
+import ScrollSmoother from '../vendor/gsap/ScrollSmoother.min.js'
+gsap.registerPlugin(ScrollSmoother)
+
+ScrollSmoother.create({
+    wrapper: '.wrapper',
+    content: '.content',
+    smooth: 1.5,
+    effects: true
+})
+
+gsap.fromTo('.main-header', { opacity: 1}, {
+    opacity: 0,
+    scrollTrigger: {
+        trigger: '.main-header',
+        start: '300',
+        end: '700',
+        scrub: true
+    }
+})
+
 const mainHeader = document.querySelector('.main-header')
 const cards = document.querySelectorAll('.card')
 
@@ -93,6 +113,6 @@ mainHeader.addEventListener('mousemove', (e) => {
 })
 
 window.addEventListener('load', placeCards)
-
+window.addEventListener('resize', placeCards)
 
 

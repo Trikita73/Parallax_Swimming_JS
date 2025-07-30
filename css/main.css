@@ -76,7 +76,7 @@ body {
     padding: 10px;
     opacity: .6;
     cursor: pointer;
-    transition: opacity .3s ease;
+    transition: opacity .3s ease, transform .75s ease-out;
     img {
         width: 100%;
     }
@@ -98,8 +98,32 @@ body {
 
 .card[data-depth='1'] {
     transform: translate(
-        calc(var(--mouse-x) * 15px),
-        calc(var(--mouse-y) * 15px)
+        calc(var(--mouse-x) * 12.5px),
+        calc(var(--mouse-y) * 12.5px)
+    );
+}
+.card[data-depth='2'] {
+    transform: translate(
+        calc(var(--mouse-x) * 20px),
+        calc(var(--mouse-y) * 20px)
+    );
+}
+.card[data-depth='3'] {
+    transform: translate(
+        calc(var(--mouse-x) * 30px),
+        calc(var(--mouse-y) * 30px)
+    );
+}
+.card[data-depth='4'] {
+    transform: translate(
+        calc(var(--mouse-x) * 40px),
+        calc(var(--mouse-y) * 40px)
+    );
+}
+.card[data-depth='5'] {
+    transform: translate(
+        calc(var(--mouse-x) * 50px),
+        calc(var(--mouse-y) * 50px)
     );
 }
 
