@@ -6,6 +6,7 @@
 
 :root {
     --accent: #EE1E7C;
+    --index: calc(1vw + 1vh); 
 }
 
 body {
@@ -68,6 +69,9 @@ body {
     pointer-events: none;
     span {
         color: var(--accent);
+    }
+    h1 {
+        font-size: calc(var(--index) * 6.95);
     }
 }
 
@@ -135,4 +139,22 @@ body {
    padding-left: 20px;
    margin-top: 60px;
    border-top: 10px solid rgba(255 255 255 / .2);
+   p {
+    display: flex;
+    justify-content: center;
+    margin: 30px 5px;
+    font-size: calc(var(--index));
+   }
+}
+
+.main-footer {
+    display: flex;
+    justify-content: center;
+    height: 1.75rem;
+    width: 100%;
+    background-color: #EE1E7C;
+    color: #fff;
+    p {
+        margin-top: 5px;
+    }
 }
